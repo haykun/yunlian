@@ -12,7 +12,6 @@ import './js/flexible'
 import "./components/stylus/mixins.styl";
 
 
-
 //引入自己封装的组件
 import common from './components/common/common.js'
 

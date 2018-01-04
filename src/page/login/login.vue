@@ -1,5 +1,8 @@
 <template>
-<div class="login">
+<div>
+    <app-login></app-login>
+    <div class="login">
+    
     <div class="logon">
         <img src="../../assets/img/icn_logo@2x.png">
     </div>
@@ -19,14 +22,22 @@
         <a href="javascript:;">点击获取语言验证码</a>
     </div>
     <div class="but">
-        <button>登录</button>
+        <button @click="logi">登录</button>
     </div>
 </div>
+</div>
+
     
 </template>
 
 <script>
-export default {};
+export default {
+    methods: {
+        logi(){
+            this.$router.push('/task')
+        }
+    }
+};
 </script>
 
 <style scoped lang="stylus">

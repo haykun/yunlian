@@ -1,15 +1,18 @@
 <template>
-  <div id="app">
-    <router-view></router-view>
+  <div>
+      配送中
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app'
+  
 }
 </script>
 
-<style>
+<style lang="stylus" scoped>
 
 </style>
+
+
+

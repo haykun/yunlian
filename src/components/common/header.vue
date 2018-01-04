@@ -1,49 +1,54 @@
 <template>
-    <div class="head">
-        <div class="titl">
-            <h2>登录</h2>
-        </div>
-        <div>
-            <a href="javascript:;" class="bgzu">常见问题</a>
-        </div>
-    </div>
+  <div class="header">
+      <div class="bar" @click="toggle">
+          <img src="../../assets/img/inc_Navigation.png">
+      </div>
+      <div class="titlt">
+          <h2>首页</h2>
+      </div>
+      <div class="main">
+          <img src="../../assets/img/icn_news.png">
+      </div>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+      //显示侧滑导航栏
+      toggle(){
+          console.log(1)
+      }
+  }
+}
 </script>
 
 <style lang="stylus" scoped>
-@import '../stylus/mixins.styl';
-
-bg-col = #101a30;   // 背景色设置
-font-fam = '微软雅黑';
-col = #ffffff
-.head {
-    position relative
+@import '../stylus/mixins.styl'
+bg-col = #101a30; 
+clo = #ffffff;
+.header{
+    padding 0 px2rem(20px)
     height: px2rem(88px)
     line-height px2rem(88px)
-    background-color: bg-col
-    font-family: font-fam
-    color col
-    overflow hidden
-    padding 0 px2rem(20px)
+    color clo
     text-align center
-    .titl{
+    overflow hidden
+    background-color bg-col
+    .bar{
+        float left
+    }
+    .main{
+        float right 
+    }
+    .titlt{
         display inline-block
         h2{
             font-size 20px
             font-weight normal
         }
-
-    }
-    .bgzu {
-        position absolute
-        top 0
-        right px2rem(20px)
-        font-size: 12px
-        color col
     }
 }
 </style>
+
 
