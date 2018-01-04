@@ -7,7 +7,7 @@
             <div class="tap">
                 <ul>
                     <li @click="clk1(0)">
-						<router-link to="/home">新任务</router-link>
+						<router-link to="/task">新任务</router-link>
 						<span></span>
 					</li>
                     <li @click="clk1(1)">
