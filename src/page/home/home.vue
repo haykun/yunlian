@@ -26,6 +26,7 @@
 				<router-view></router-view>
 			</keep-alive>
 		</div>
+		<app-footer></app-footer>
     </main>
 
 </template>
