@@ -7,6 +7,8 @@ import HomeComponent from '../page/home/home.vue'
 import PeisongCompnent from '../page/peisong/peisong.vue'
 import YichangComponent from '../page/yichang/yichang.vue'
 import TaskComponent from '../page/task/task.vue'
+
+import MeCompontent from '../page/me/me.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +35,11 @@ export default new Router({
         name:'task',
         component:TaskComponent
       }]
+    },
+    {
+      path:'/me',
+      name:'me',
+      component:MeCompontent
     }
   ]
 })

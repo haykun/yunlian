@@ -14,7 +14,7 @@
               </router-link>
           </li>
           <li>
-              <router-link to="/">
+              <router-link to="/me">
                   <img src="../../assets/img/footer/foot_home_d.png" alt="">
                   <p>我的</p>
               </router-link>

@@ -11,20 +11,24 @@
         <div class="content">
 			<!-- tab栏切换 -->
             <div class="tap">
-                <ul>
-                    <li @click="clk1(0)">
-						<router-link to="/task">新任务</router-link>
+
+					<router-link to="/task" @click.native="clk1(0)">
+               
+						新任务
 						<span></span>
-					</li>
-                    <li @click="clk1(1)">
-						<router-link to="/estate">配送中</router-link>
+				
+					</router-link>
+					<router-link to="/estate" @click.native="clk1(1)">
+
+						配送中
 						<span></span>
-					</li>
-                    <li @click="clk1(2)">
-						<router-link to="/usual">异常单</router-link>
+
+					</router-link>
+					<router-link to="/usual" @click.native="clk1(2)">
+						异常单
 						<span></span>
-					</li>
-                </ul>
+					</router-link>
+
             </div>
         </div>
 		<!-- 主体内容区域 -->
@@ -45,7 +49,7 @@ export default {
   },
   methods: {
     clk1(index) {
-      let arr = document.querySelectorAll(".tap li span");
+      let arr = document.querySelectorAll(".tap span");
       for (var i = 0; i < arr.length; i++) {
         arr[i].style.display = "none";
       }
@@ -78,21 +82,18 @@ bg-col = #101a30;
 		text-align: center;
 		padding: 0 px2rem(60px);
 
-		li {
+		a {
 			position: relative;
 			top: 0;
 			left: 0;
+			color: #ffffff;
+			font-size: 15px;
 			display: inline-block;
 			width: px2rem(122px);
 			text-align: center;
-
-			a {
-				color: #ffffff;
-				font-size: 15px;
-			}
 		}
 
-		li span {
+		a span {
 			position: absolute;
 			bottom: px2rem(-1px);
 			left: 0;
@@ -104,7 +105,7 @@ bg-col = #101a30;
 			display: none;
 		}
 
-		li:first-child {
+		a:first-child {
 			float: left;
 
 			span {
@@ -112,34 +113,36 @@ bg-col = #101a30;
 			}
 		}
 
-		li:last-child {
+		a:last-child {
 			float: right;
 		}
 	}
 }
 
-.ceng{
-	position fixed
-	top 0
-	left 0
-	z-index 5
-	width 100%
-	height 100%
-	background-color rgba(0,0,0,.2) 
+.ceng {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
-.move-enter-active{
-	transition : all 2s
-}
-.move-leave-active{
-	transition : all 2s
-}
-.move-enter{
-	transform translateX(-100%)
-}
-.move-leave-to{
-	transform translateX(-100%)
+.move-enter-active {
+	transition: all 1s;
 }
 
+.move-leave-active {
+	transition: all 1s;
+}
+
+.move-enter {
+	transform: translateX(-100%);
+}
+
+.move-leave-to {
+	transform: translateX(-100%);
+}
 </style>
 
