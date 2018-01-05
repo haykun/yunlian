@@ -7,17 +7,20 @@ import Mint from 'mint-ui';
 import 'mint-ui/lib/style.css';
 import './css/reset.css';
 import axios from 'axios';
+//侧滑导航栏插件
+import DrawerLayout from 'vue-drawer-layout'
 //引入lib-flexible进行屏幕适配
 import './js/flexible'
 import "./components/stylus/mixins.styl";
 
-//引入自己封装的组件
+//引入自己封装的组件,或第三方插件
 import common from './components/common/common.js'
-
+import store from './vuex/store.js'
 
 //手动启用插件
 Vue.use(Mint);
 Vue.use(common);
+Vue.use(DrawerLayout);
 
 
 //解决移动端点击300ms延迟
@@ -37,6 +40,7 @@ Vue.prototype.axios = axios;
 new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
   components: { App }
 })

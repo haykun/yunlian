@@ -1,6 +1,7 @@
 <template>
   <div>
       正在配送中哦
+      <app-aside></app-aside>
   </div>
 </template>
 

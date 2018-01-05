@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-      <div class="bar" @click="toggle">
+      <div class="bar" @click="$store.state.toggleaside = !$store.state.toggleaside">
           <img src="../../assets/img/inc_Navigation.png">
       </div>
       <div class="titlt">

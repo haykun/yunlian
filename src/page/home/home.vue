@@ -3,11 +3,13 @@
     <main>
 		<!-- 头部 -->
         <app-header></app-header> 
-		<transition>
-			<app-aside></app-aside>
+		<transition name="move">
+			<app-aside v-show="$store.state.toggleaside"></app-aside>
 		</transition>
+		<!-- 遮罩层 -->
+		<div class="ceng" v-show="$store.state.toggleaside"></div>
         <div class="content">
-					<!-- tab栏切换 -->
+			<!-- tab栏切换 -->
             <div class="tap">
                 <ul>
                     <li @click="clk1(0)">
@@ -39,19 +41,17 @@
 <script>
 export default {
   data() {
-    return {
-      
-    };
-	},
-	methods: {
-		clk1(index){
-			let arr = document.querySelectorAll('.tap li span')
-			for(var i =0;i<arr.length;i++){
-				arr[i].style.display = 'none'
-			}
-			arr[index].style.display = 'block'
-		}
-	}
+    return {};
+  },
+  methods: {
+    clk1(index) {
+      let arr = document.querySelectorAll(".tap li span");
+      for (var i = 0; i < arr.length; i++) {
+        arr[i].style.display = "none";
+      }
+      arr[index].style.display = "block";
+    }
+  }
 };
 </script>
 
@@ -62,15 +62,16 @@ export default {
 bg-col = #101a30;
 
 .content {
-	margin-top px2rem(-2px)
-	//tab栏切换
+	margin-top: px2rem(-2px);
+
+	// tab栏切换
 	.tap {
-		position fixed
-		top px2rem(70px)
-		left 0
-		z-index 2
-		width 100%
-		box-sizing border-box
+		position: fixed;
+		top: px2rem(70px);
+		left: 0;
+		z-index: 2;
+		width: 100%;
+		box-sizing: border-box;
 		background-color: bg-col;
 		height: px2rem(80px);
 		line-height: px2rem(80px);
@@ -84,7 +85,8 @@ bg-col = #101a30;
 			display: inline-block;
 			width: px2rem(122px);
 			text-align: center;
-			a{
+
+			a {
 				color: #ffffff;
 				font-size: 15px;
 			}
@@ -99,13 +101,14 @@ bg-col = #101a30;
 			display: inline-block;
 			height: px2rem(8px);
 			width: 100%;
-			display none
+			display: none;
 		}
 
 		li:first-child {
 			float: left;
+
 			span {
-				display block
+				display: block;
 			}
 		}
 
@@ -114,5 +117,29 @@ bg-col = #101a30;
 		}
 	}
 }
+
+.ceng{
+	position fixed
+	top 0
+	left 0
+	z-index 5
+	width 100%
+	height 100%
+	background-color rgba(0,0,0,.2) 
+}
+
+.move-enter-active{
+	transition : all 2s
+}
+.move-leave-active{
+	transition : all 2s
+}
+.move-enter{
+	transform translateX(-100%)
+}
+.move-leave-to{
+	transform translateX(-100%)
+}
+
 </style>
 

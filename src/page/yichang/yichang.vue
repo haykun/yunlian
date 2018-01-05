@@ -1,5 +1,5 @@
 <template>
-  <div>占时没有没有东西哦</div>
+
 </template>
 
 <script>
