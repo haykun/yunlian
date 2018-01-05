@@ -133,7 +133,7 @@ col = #383838 //字体颜色
                     background-color #2166ff
                     color #ffffff
                     font-size 20px
-                    font-weight bolder
+                    font-weight 500
                     margin-right px2rem(74px)
                     margin-top 50%
                     transform translateY(-50%)
