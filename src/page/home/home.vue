@@ -1,7 +1,11 @@
 <template>
 
     <main>
-        <app-header></app-header>
+		<!-- 头部 -->
+        <app-header></app-header> 
+		<transition>
+			<app-aside></app-aside>
+		</transition>
         <div class="content">
 					<!-- tab栏切换 -->
             <div class="tap">
@@ -21,6 +25,7 @@
                 </ul>
             </div>
         </div>
+		<!-- 主体内容区域 -->
 		<div class="main">
 			<keep-alive>
 				<router-view></router-view>
@@ -60,6 +65,12 @@ bg-col = #101a30;
 	margin-top px2rem(-2px)
 	//tab栏切换
 	.tap {
+		position fixed
+		top px2rem(70px)
+		left 0
+		z-index 2
+		width 100%
+		box-sizing border-box
 		background-color: bg-col;
 		height: px2rem(80px);
 		line-height: px2rem(80px);

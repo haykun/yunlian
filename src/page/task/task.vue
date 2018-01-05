@@ -55,6 +55,8 @@ bg-col = #343d50    //背景色
 col = #383838 //字体颜色
 .content{
     padding 0 px2rem(20px)
+    margin-top px2rem(160px)
+    margin-bottom px2rem(98px)
     .card{
         margin-top px2rem(20px)
         height px2rem(400px)

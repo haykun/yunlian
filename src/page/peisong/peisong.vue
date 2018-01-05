@@ -1,6 +1,6 @@
 <template>
   <div>
-      配送中
+      正在配送中哦
   </div>
 </template>
 

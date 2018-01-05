@@ -28,12 +28,17 @@ export default {
 bg-col = #101a30; 
 clo = #ffffff;
 .header{
+    position fixed
+    top 0
+    left 0
+    z-index 2
+    width 100%
+    box-sizing border-box
     padding 0 px2rem(20px)
     height: px2rem(88px)
     line-height px2rem(88px)
     color clo
     text-align center
-    overflow hidden
     background-color bg-col
     .bar{
         float left

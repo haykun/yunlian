@@ -31,21 +31,23 @@ export default {};
 @import '../stylus/mixins.styl'
 
 .foot {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    position fixed
+    bottom 0
+    left 0
+    z-index 2
     height: px2rem(98px);
-
+    width 100%
+    box-sizing border-box
+    background-color #ffffff
     ul {
         position: relative;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-
+        display flex
         li {
-            display: inline-block;
-            width: 33.333%;
+            flex 1
             text-align: center;
         }
     }
