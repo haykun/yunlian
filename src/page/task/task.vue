@@ -1,7 +1,7 @@
 <template>
   <div class="content">
       <!-- 卡片视图 -->
-    <div class="card" v-for="(info,index) in arr" :key="index">
+    <div class="card">
         <div class="titlt">
             <div class="til">任务一</div>
             <div class="adress">
@@ -115,7 +115,7 @@ col = #383838 //字体颜色
                     padding-left px2rem(50px)
                     li{
                         display inline-block
-                        border 1px solid #343d50
+                        border 1px solid #999ea7
                         padding px2rem(2px)
                         border-radius px2rem(6px)
                     }
@@ -158,6 +158,9 @@ col = #383838 //字体颜色
             a{
                 color col
                 font-size 15px
+                span:last-child{
+                    float right 
+                }
             }
         }
     }
