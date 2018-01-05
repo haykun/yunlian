@@ -42,11 +42,14 @@
         </div>
     </div>
     <!-- 评论模块 -->
+    <app-evalate></app-evalate>
+    <!-- 公共底部 -->
     <app-footer></app-footer>
   </div>
 </template>
 
 <script>
+import Evalate from "../../components/me/comment.vue";
 export default {
   data() {
     return {};
@@ -63,6 +66,9 @@ export default {
       arr[id].style.display = "block";
       arr1[id].style.fontWeight = "bold";
     }
+  },
+  components: {
+    "app-evalate": Evalate
   }
 };
 </script>
@@ -237,12 +243,13 @@ derCol = #dedede; // 战绩线框颜色
                 float: right;
             }
         }
-        //排行榜
+
+        // 排行榜
         // 排行榜
         .rnking {
             width: 100%;
             height: px2rem(68px);
-            line-height px2rem(68px)
+            line-height: px2rem(68px);
             box-sizing: border-box;
             box-shadow: px2rem(0px) px2rem(4px) px2rem(6px) #ddd;
             font-size: 15px;
