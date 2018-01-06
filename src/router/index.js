@@ -9,6 +9,8 @@ import YichangComponent from '../page/yichang/yichang.vue'
 import TaskComponent from '../page/task/task.vue'
 
 import MeCompontent from '../page/me/me.vue'
+
+import LssueCompontent from '../page/peisong/lssue.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -16,30 +18,35 @@ export default new Router({
     {
       path: '/',
       name: 'login',
-      component: LoginComponent
+      component: LoginComponent   //登录界面
     },
     {
       path:'/home',
       name:'home',
-      component:HomeComponent,
+      component:HomeComponent,    //主页
       children:[{
         path:'/estate',
         name:'esate',
-        component:PeisongCompnent
+        component:PeisongCompnent   //配送中
       },{
         path:'/usual',
         name:'usual',
-        component:YichangComponent
+        component:YichangComponent    //异常单
       },{
         path:'/task',
         name:'task',
-        component:TaskComponent
+        component:TaskComponent     //新任务
       }]
     },
     {
       path:'/me',
       name:'me',
-      component:MeCompontent
+      component:MeCompontent  //我的
+    },
+    {
+      path:'/lssue',
+      name:'lssue',
+      component:LssueCompontent
     }
   ]
 })

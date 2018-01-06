@@ -42,10 +42,9 @@ export default {
             this.$store.state.home= require("../../assets/img/footer/foot_home_d.png")
             this.$store.state.my = require("../../assets/img/footer/foot_my_d.png")
         }else{
-
             this.$store.state.my = require("../../assets/img/footer/foot_mv_s.png")
             this.$store.state.query = require("../../assets/img/footer/foot_query_d.png")
-            this.$store.state.my = require("../../assets/img/footer/foot_my_d.png")
+            this.$store.state.home = require("../../assets/img/footer/foot_home_d.png")
         }
     }
   }

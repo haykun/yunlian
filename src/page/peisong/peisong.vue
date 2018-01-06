@@ -46,7 +46,10 @@
             <div><span><img src="../../assets/img/icn_map.png" alt=""></span><i></i><span>查看地图</span> </div>
             <div><span><img src="../../assets/img/icn_phone2.png" alt=""></span><span>李小姐</span></div>
         </div>
-        <div class="opertain"><button>签发</button><button>起运</button></div>
+        <div class="opertain">
+          <router-link to="/lssue">签发</router-link>
+          <router-link to="/">起运</router-link>
+        </div>
     </div>
 
   </div>
@@ -127,7 +130,7 @@ col = #383838;
     // 背景图
     .ground {
       position: absolute;
-      bottom : px2rem(180px);
+      bottom: px2rem(180px);
       right: px2rem(14px);
       width: px2rem(200px);
       height: px2rem(200px);
@@ -138,6 +141,7 @@ col = #383838;
     // 提货标题栏
     .title {
       height: px2rem(70px);
+      border-top-left-radius: px2rem(20px);
       line-height: px2rem(70px);
       color: cardcol;
       font-size: 20px;
@@ -274,7 +278,8 @@ col = #383838;
       box-sizing: border-box;
       overflow: hidden;
 
-      button {
+      a {
+        display: inline-block;
         width: px2rem(300px);
         height: px2rem(80px);
         line-height: px2rem(80px);
@@ -286,8 +291,12 @@ col = #383838;
         color: #ffffff;
       }
 
-      button:first-child {
-        margin-right: px2rem(40px);
+      a:first-child {
+        float: left;
+      }
+
+      a:last-child {
+        float: right;
       }
     }
   }
