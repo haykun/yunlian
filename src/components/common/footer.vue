@@ -2,7 +2,7 @@
   <div class="foot">
       <ul>
           <li>
-              <router-link to="/">
+              <router-link to="/task">
                   <img src="../../assets/img/footer/foot_home_d.png" alt="">
                   <p>首页</p>
               </router-link>
