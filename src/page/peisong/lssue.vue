@@ -28,16 +28,18 @@
                   <td>花都仓库</td>
                   <td>汽车配件</td>
                   <td>2件3方1吨</td>
-                  <td>2件3方1吨<img src="../../assets/img/icn_modify.png"></td>
+                  <td @click="modify">2件3方1吨<img src="../../assets/img/icn_modify.png"></td>
               </tr>
               <tr>
                   <td>花都仓库</td>
                   <td>汽车配件</td>
                   <td>2件10方1吨</td>
-                  <td>2件10方1吨<img src="../../assets/img/icn_modify.png"></td>
+                  <td @click="modify">2件10方1吨<img src="../../assets/img/icn_modify.png"></td>
               </tr>
           </table>
       </div>
+      <!-- 弹框 -->
+      <!-- <app-box style="width:100%;height:100%"></app-box> -->
       <!-- 表单提交 -->
       <div class="form">
           <div>
@@ -62,7 +64,8 @@
 
 <script>
 import canvas from "../../components/peisong/canvas.vue";
-
+// import { MessageBox } from "mint-ui";
+import MessageBox from "../../components/peisong/messageBox.vue";
 export default {
   data() {
     return {
@@ -70,16 +73,21 @@ export default {
       usercode: "",
       code: "",
       headerName: "签发",
-      operation:'返回'
+      operation: "返回"
     };
   },
   components: {
-    "app-canvas": canvas
+    "app-canvas": canvas,
+    "app-box": MessageBox
   },
   methods: {
     //获取验证码事件
     verification() {
       console.log(1);
+    },
+    // 修改货物信息
+    modify() {
+      this.$store.state.messageBox = true;
     }
   }
 };
@@ -91,7 +99,7 @@ export default {
 bg-col = #061128;
 zCl = #383838;
 
-字体颜色, .lssue {
+.lssue {
     position: relative;
     width: 100%;
     height: 100%;

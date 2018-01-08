@@ -20,7 +20,7 @@
         <div class="renwu">
             <ul>
                 <li>
-                    <router-link to="/">
+                    <router-link to="/history">
                         <img src="../../assets/img/侧边栏-我的/icn_task.png" alt=""><span>历史任务</span>
                     </router-link>
                     

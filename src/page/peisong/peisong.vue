@@ -79,6 +79,8 @@ col = #383838;
   overflow: hidden;
   margin-top: px2rem(160px);
   margin-bottom: px2rem(98px);
+  background-color: #ececec;
+
   // 卡片视图
   .card {
     position: relative;
@@ -88,7 +90,7 @@ col = #383838;
     box-shadow: px2rem(0px) px2rem(1px) px2rem(1px) #ccc;
     margin-top: px2rem(20);
     border-bottom-left-radius: px2rem(20px);
-    background-color #ffffff
+
     // 数字视图
     .number {
       position: absolute;
@@ -180,6 +182,7 @@ col = #383838;
       height: px2rem(294px);
       position: relative;
       overflow: hidden;
+      background-color: #ffffff;
 
       .address {
         position: absolute;
@@ -234,6 +237,7 @@ col = #383838;
       line-height: px2rem(82px);
       padding: 0 px2rem(20px);
       box-sizing: border-box;
+      background-color: #ffffff;
 
       div {
         border-top: 1px solid #eee;
@@ -272,10 +276,12 @@ col = #383838;
 
     // 签发起运
     .opertain {
+      background-color: #ffffff;
       width: 100%;
       padding: px2rem(20px);
       box-sizing: border-box;
       overflow: hidden;
+      border-bottom-left-radius: px2rem(20px);
 
       a {
         display: inline-block;

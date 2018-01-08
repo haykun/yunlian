@@ -65,12 +65,9 @@ export default {
 // 头部tab栏
 bg-col = #101a30;
 
-.main {
-	background-color: #ececec;
-}
-
 .content {
 	margin-top: px2rem(-2px);
+	overflow: hidden;
 
 	// tab栏切换
 	.tap {
@@ -85,7 +82,7 @@ bg-col = #101a30;
 		line-height: px2rem(80px);
 		text-align: center;
 		padding: 0 px2rem(60px);
-
+		overflow hidden
 		a {
 			position: relative;
 			top: 0;

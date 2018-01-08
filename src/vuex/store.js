@@ -9,7 +9,8 @@ const state = {
   // 底部图片的路径
   query: require("../assets/img/footer/foot_query_d.png"),
   my: require("../assets/img/footer/foot_my_d.png"),
-  home: require('../assets/img/footer/foot_home_s.png')
+  home: require('../assets/img/footer/foot_home_s.png'),
+  messageBox:false
 }
 
 const mutations = {

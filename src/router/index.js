@@ -13,6 +13,7 @@ import MeCompontent from '../page/me/me.vue'
 import LssueCompontent from '../page/peisong/lssue.vue'
 import SetUpCompontent from '../page/setUp/set.vue' //设置页面
 import HelpCompontent from '../page/help/help.vue' //帮助中心
+import HistoryCompontent from '../page/history/history.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -48,7 +49,7 @@ export default new Router({
     {
       path: '/lssue',
       name: 'lssue',
-      component: LssueCompontent
+      component: LssueCompontent  //签发
     },
     {
       path: '/setup',
@@ -59,6 +60,11 @@ export default new Router({
       path: '/help',
       name: 'help',
       component: HelpCompontent
+    },
+    {
+      path:'/history',
+      name:'history',
+      component:HistoryCompontent
     }
   ]
 })
