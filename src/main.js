@@ -12,6 +12,11 @@ import DrawerLayout from 'vue-drawer-layout'
 //引入lib-flexible进行屏幕适配
 import './js/flexible'
 import "./components/stylus/mixins.styl";
+//引用字体图标文件
+import './css/icon/iconfont.css'
+//手写签名插件
+import vueSignature from "vue-signature"
+
 
 //引入自己封装的组件,或第三方插件
 import common from './components/common/common.js'
@@ -21,7 +26,7 @@ import store from './vuex/store.js'
 Vue.use(Mint);
 Vue.use(common);
 Vue.use(DrawerLayout);
-
+Vue.use(vueSignature);
 
 //解决移动端点击300ms延迟
 import FastClick from 'fastclick';
@@ -42,5 +47,7 @@ new Vue({
   router,
   store,
   template: '<App/>',
-  components: { App }
+  components: {
+    App
+  }
 })

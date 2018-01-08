@@ -36,7 +36,7 @@
                     </router-link>
                 </li>
                 <li>
-                    <router-link to="/">
+                    <router-link to="/help">
                         <img src="../../assets/img/侧边栏-我的/icn_help.png" alt=""><span>帮助中心</span>
                     </router-link>
                 </li>
@@ -46,7 +46,7 @@
                     </router-link>
                 </li>   
                 <li>
-                    <router-link to="/">
+                    <router-link to="/setup">
                         <img src="../../assets/img/侧边栏-我的/icn_set.png" alt=""><span>设置</span>
                     </router-link>
                 </li>

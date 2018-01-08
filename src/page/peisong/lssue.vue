@@ -1,7 +1,7 @@
 <template>
   <div class="lssue">
       <!-- 头部 -->
-      <div class="header"></div>
+     <app-comhed :name="headerName" :operation = "operation"></app-comhed>
       <!-- 用户信息 -->
       <div class="user">
           <div class="img">
@@ -52,20 +52,35 @@
           <div>
               <span>验证码:</span>
               <input type="text" placeholder="输入验证码">
-              <button>获取验证码</button>
+              <button @click="verification">获取验证码</button>
           </div>
       </div>
+      <!-- 签名版 -->
+      <app-canvas></app-canvas>
   </div>
 </template>
 
 <script>
+import canvas from "../../components/peisong/canvas.vue";
+
 export default {
   data() {
     return {
       username: "",
       usercode: "",
-      code: ""
+      code: "",
+      headerName: "签发",
+      operation:'返回'
     };
+  },
+  components: {
+    "app-canvas": canvas
+  },
+  methods: {
+    //获取验证码事件
+    verification() {
+      console.log(1);
+    }
   }
 };
 </script>
@@ -77,7 +92,9 @@ bg-col = #061128;
 zCl = #383838;
 
 字体颜色, .lssue {
+    position: relative;
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
 
     // 头部
