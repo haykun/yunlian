@@ -65,6 +65,10 @@ export default {
 // 头部tab栏
 bg-col = #101a30;
 
+.main {
+	background-color: #ececec;
+}
+
 .content {
 	margin-top: px2rem(-2px);
 

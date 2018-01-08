@@ -44,13 +44,13 @@ export default {
   data() {
     return {
       headerName: "设置",
-      operation: "",
+      operation: ""
     };
   },
   methods: {
-      back(){
-          this.$router.push('/')
-      }
+    back() {
+      this.$router.push("/");
+    }
   }
 };
 </script>
@@ -72,8 +72,8 @@ zCl = #383838;
 
         div {
             width: 100%;
-            height: px2rem(140px);
-            line-height: px2rem(140px);
+            height: px2rem(100px);
+            line-height: px2rem(100px);
             box-sizing: border-box;
 
             a {
@@ -83,9 +83,14 @@ zCl = #383838;
                 font-size: 15px;
                 overflow: hidden;
                 border-bottom: 1px solid #d9d9d9;
-                padding-right: px2rem(20px);
+                // padding-right: px2rem(20px);
                 box-sizing: border-box;
             }
+        }
+
+        div:first-child {
+            height: px2rem(140px);
+            line-height: px2rem(140px);
         }
 
         span:first-child {
@@ -96,6 +101,7 @@ zCl = #383838;
         span:last-child {
             float: right;
             color: #939393;
+            margin-right: px2rem(20px);
         }
 
         .jiashi, .card {

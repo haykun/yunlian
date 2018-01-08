@@ -79,7 +79,6 @@ col = #383838;
   overflow: hidden;
   margin-top: px2rem(160px);
   margin-bottom: px2rem(98px);
-
   // 卡片视图
   .card {
     position: relative;
@@ -89,7 +88,7 @@ col = #383838;
     box-shadow: px2rem(0px) px2rem(1px) px2rem(1px) #ccc;
     margin-top: px2rem(20);
     border-bottom-left-radius: px2rem(20px);
-
+    background-color #ffffff
     // 数字视图
     .number {
       position: absolute;
