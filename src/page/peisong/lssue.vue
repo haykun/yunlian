@@ -40,9 +40,20 @@
       </div>
       <!-- 表单提交 -->
       <div class="form">
-          <mt-field label="发货人姓名:" placeholder="请输入发货人姓名" v-model="username"></mt-field>
-          <mt-field label="身份证号码:" placeholder="请输入你的身份证号码" v-model="usercode"></mt-field>
-          <mt-field label="验证码:" placeholder="请输入用户名" v-model="code"></mt-field>
+          <div>
+              <span>发货人姓名：</span>
+              <input type="text" placeholder="请输入发货人姓名">
+          </div>
+          <div>
+              <span>身份证号码：</span>
+               <input type="text" placeholder="请输入你的身份证号码">
+          </div>
+         
+          <div>
+              <span>验证码:</span>
+              <input type="text" placeholder="输入验证码">
+              <button>获取验证码</button>
+          </div>
       </div>
   </div>
 </template>
@@ -63,8 +74,9 @@ export default {
 @import '../../components/stylus/mixins.styl';
 
 bg-col = #061128;
+zCl = #383838;
 
-.lssue {
+字体颜色, .lssue {
     width: 100%;
     box-sizing: border-box;
 
@@ -74,8 +86,150 @@ bg-col = #061128;
         height: px2rem(80px);
         background-color: bg-col;
     }
-    //用户信息
-    
+
+    // 用户信息
+    .user {
+        position: relative;
+        width: 100%;
+        background-color: #ffffff;
+        height: px2rem(168px);
+        overflow: hidden;
+        color: zCl;
+
+        // 头像
+        .img {
+            position: absolute;
+            top: 50%;
+            left: px2rem(40px);
+            transform: translateY(-50%);
+            width: px2rem(140px);
+            height: px2rem(140px);
+            border-radius: 50%;
+            background-color: skyblue;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .usname {
+            position: absolute;
+            top: 50%;
+            left: px2rem(200px);
+            transform: translateY(-50%);
+            font-size: 15px;
+        }
+    }
+
+    // 货物信息
+    .information {
+        width: 100%;
+        font-size: 12px;
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-bottom: 1px solid #d9d9d9;
+        }
+
+        tr {
+            display: flex;
+            height: px2rem(60px);
+            line-height: px2rem(60px);
+
+            td {
+                box-sizing: border-box;
+                border-right: 1px solid #dedede;
+            }
+
+            td:first-child {
+                width: px2rem(166px);
+            }
+
+            td:nth-child(2) {
+                width: px2rem(166px);
+            }
+
+            td:nth-child(3) {
+                width: px2rem(210px);
+            }
+
+            td:last-child {
+                width: px2rem(212px);
+
+                img {
+                    margin-bottom: px2rem(8px);
+                    margin-left: px2rem(6px);
+                }
+            }
+        }
+
+        tr:first-child {
+            background-color: bg-col;
+            color: #ffffff;
+
+            td {
+                border-right: 1px solid #ffffff;
+            }
+        }
+
+        tr:nth-child(2) {
+            border-bottom: 1px solid #dedede;
+        }
+    }
+
+    // 表单提交
+    .form {
+        margin-top: px2rem(20px);
+        width: 100%;
+        color: zCl;
+
+        div {
+            position: relative;
+            font-size: 15px;
+            color: zCl;
+
+            input {
+                width: 100%;
+                height: px2rem(80px);
+                box-sizing: border-box;
+                border-top: 1px solid #d9d9d9;
+                font-size: 15px;
+                padding-left: px2rem(200px);
+            }
+
+            span {
+                position: absolute;
+                top: 50%;
+                left: px2rem(20px);
+                transform: translateY(-50%);
+            }
+
+            button {
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: px2rem(202px);
+                height: 100%;
+                line-height: 100%;
+                font-size: 12px;
+                background-color: bg-col;
+                text-align: center;
+                color: #ffffff;
+            }
+        }
+
+        div:last-child {
+            border-bottom: 1px solid #d9d9d9;
+
+            input {
+                height: px2rem(96px);
+                padding-left: px2rem(140px);
+            }
+        }
+    }
 }
 </style>
 
