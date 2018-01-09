@@ -10,7 +10,8 @@ import TaskComponent from '../page/task/task.vue'
 
 import MeCompontent from '../page/me/me.vue'
 
-import LssueCompontent from '../page/peisong/lssue.vue'
+import LssueCompontent from '../page/peisong/lssue.vue' //签发页面
+import SignCompontent from '../page/peisong/sign.vue' //签收页面
 import SetUpCompontent from '../page/setUp/set.vue' //设置页面
 import HelpCompontent from '../page/help/help.vue' //帮助中心
 import HistoryCompontent from '../page/history/history.vue' //历史记录
@@ -53,6 +54,11 @@ export default new Router({
       component: LssueCompontent //签发
     },
     {
+      path: '/sign',
+      name: 'sign',
+      component: SignCompontent //签收
+    },
+    {
       path: '/setup',
       name: 'setup',
       component: SetUpCompontent
@@ -66,14 +72,14 @@ export default new Router({
       path: '/history',
       name: 'history',
       component: HistoryCompontent
-    }, 
+    },
     {
       path: '/waybill',
       name: 'waybill',
       component: WayBillCompontent,
-      children:[{
+      // children:[{
 
-      }]
+      // }]
     }
   ]
 })

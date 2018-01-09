@@ -21,8 +21,8 @@
               <tr>
                   <td>始发地</td>
                   <td>货物类型</td>
-                  <td>计划发货</td>
-                  <td>实际发货</td>
+                  <td>计划签收</td>
+                  <td>实际签收</td>
               </tr>
               <tr>
                   <td>花都仓库</td>
@@ -38,11 +38,13 @@
               </tr>
           </table>
       </div>
+      <!-- 弹框 -->
+      <!-- <app-box style="width:100%;height:100%"></app-box> -->
       <!-- 表单提交 -->
       <div class="form">
           <div>
-              <span>发货人姓名：</span>
-              <input type="text" placeholder="请输入发货人姓名">
+              <span>收货人姓名</span>
+              <input type="text" placeholder="请输入收货人姓名">
           </div>
           <div>
               <span>身份证号码：</span>
@@ -56,31 +58,33 @@
           </div>
       </div>
       <!-- 签名版 -->
-      <app-canvas :qianfa="true" :fahuo="false"></app-canvas>
-
-     <!-- 修改货物信息弹框 -->
+      <app-canvas :qianfa="false" :fahuo="true"></app-canvas>
+      <!-- 修改货物信息弹框 -->
       <transition name="modify">
           <app-modify v-show="$store.state.modifyBox"></app-modify>
       </transition>
+      
   </div>
 </template>
 
 <script>
 import canvas from "../../components/peisong/canvas.vue";
+// import { MessageBox } from "mint-ui";
+import MessageBox from "../../components/peisong/messageBox.vue";
 import ModifyBox from "../../components/peisong/modifyBox.vue";
-
 export default {
   data() {
     return {
       username: "",
       usercode: "",
       code: "",
-      headerName: "签发",
+      headerName: "签收",
       operation: "返回"
     };
   },
   components: {
     "app-canvas": canvas,
+    "app-box": MessageBox,
     "app-modify": ModifyBox
   },
   methods: {
