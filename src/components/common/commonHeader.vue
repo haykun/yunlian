@@ -4,7 +4,7 @@
       <h2>{{ name }}</h2>
       <span v-if="flag"><i class="iconfont icon-more"></i></span>
   </div>
-</template>
+</template>  
 
 <script>
 export default {

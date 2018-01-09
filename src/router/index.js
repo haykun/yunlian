@@ -1,14 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import LoginComponent from '../page/login/login.vue'
+import LoginComponent from '../page/login/login.vue' //登录
 
-import HomeComponent from '../page/home/home.vue'
-import PeisongCompnent from '../page/peisong/peisong.vue'
-import YichangComponent from '../page/yichang/yichang.vue'
+import HomeComponent from '../page/home/home.vue' //首页
+import PeisongCompnent from '../page/peisong/peisong.vue' //配送
+import YichangComponent from '../page/yichang/yichang.vue' //异常
 import TaskComponent from '../page/task/task.vue'
-
-import MeCompontent from '../page/me/me.vue'
+import CheckCompontent from '../page/check/check.vue' //查单页面
+import WatchCompontent from '../page/task/watchDetail' //查看详情
+import MeCompontent from '../page/me/me.vue' //我的
 
 import LssueCompontent from '../page/peisong/lssue.vue' //签发页面
 import SignCompontent from '../page/peisong/sign.vue' //签收页面
@@ -34,18 +35,26 @@ export default new Router({
       name: 'home',
       component: HomeComponent, //主页
       children: [{
-        path: '/estate',
-        name: 'esate',
-        component: PeisongCompnent //配送中
-      }, {
-        path: '/usual',
-        name: 'usual',
-        component: YichangComponent //异常单
-      }, {
-        path: '/task',
-        name: 'task',
-        component: TaskComponent //新任务
-      }]
+          path: '/estate',
+          name: 'esate',
+          component: PeisongCompnent //配送中
+        },
+        {
+          path: '/usual',
+          name: 'usual',
+          component: YichangComponent //异常单
+        },
+        {
+          path: '/task',
+          name: 'task',
+          component: TaskComponent //新任务
+        }
+      ]
+    },
+    {
+      path: '/check',
+      name: 'check',
+      component: CheckCompontent
     },
     {
       path: '/me',
@@ -94,6 +103,11 @@ export default new Router({
         name: 'wayyes',
         component: ToSignCompontent //已签收
       }]
+    },
+    {
+      path: '/watch',
+      name: 'watchDetail',
+      component: WatchCompontent
     }
   ]
 })

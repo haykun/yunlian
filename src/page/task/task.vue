@@ -28,10 +28,10 @@
         </div>
         <div class="chakan">
             <i></i>
-            <a href="javascript:;">
+            <router-link to="/watch">
                 <span>查看详情</span>
                 <span><img src="../../assets/img/inc_r.png" alt=""></span>
-            </a>
+            </router-link>
         </div>
     </div>
   </div>

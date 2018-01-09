@@ -8,7 +8,7 @@
               </router-link>
           </li>
           <li>
-              <router-link to="/task" @click.native="clk(1)">
+              <router-link to="/check" @click.native="clk(1)">
                   <img :src="$store.state.query" alt="">
                   <p>查单</p>
               </router-link>
@@ -26,26 +26,24 @@
 <script>
 export default {
   data() {
-    return {
-
-    };
+    return {};
   },
   methods: {
     // 点击切换底部图标
     clk(id) {
-        if(id == 0){
-            this.$store.state.home = require("../../assets/img/footer/foot_home_s.png")
-            this.$store.state.query = require("../../assets/img/footer/foot_query_d.png")
-            this.$store.state.my = require("../../assets/img/footer/foot_my_d.png")
-        }else if(id == 1){
-            this.$store.state.query = require("../../assets/img/footer/foot_query_s.png")
-            this.$store.state.home= require("../../assets/img/footer/foot_home_d.png")
-            this.$store.state.my = require("../../assets/img/footer/foot_my_d.png")
-        }else{
-            this.$store.state.my = require("../../assets/img/footer/foot_mv_s.png")
-            this.$store.state.query = require("../../assets/img/footer/foot_query_d.png")
-            this.$store.state.home = require("../../assets/img/footer/foot_home_d.png")
-        }
+      if (id == 0) {
+        this.$store.state.home = require("../../assets/img/footer/foot_home_s.png");
+        this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
+        this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
+      } else if (id == 1) {
+        this.$store.state.query = require("../../assets/img/footer/foot_query_s.png");
+        this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
+        this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
+      } else {
+        this.$store.state.my = require("../../assets/img/footer/foot_mv_s.png");
+        this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
+        this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
+      }
     }
   }
 };
@@ -75,9 +73,10 @@ export default {
         li {
             flex: 1;
             text-align: center;
-            a{
-                width 100%
-                height 100%
+
+            a {
+                width: 100%;
+                height: 100%;
             }
         }
 

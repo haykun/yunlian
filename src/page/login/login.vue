@@ -34,7 +34,11 @@
 export default {
     methods: {
         logi(){
-            this.$router.push('/task')
+
+            // 通过路由跳转页面的两种方式
+            // this.$router.push('/task')   //会有历史记录
+            this.$router.replace('/task')     //不会有历史记录
+            // console.log(location.host)
         }
     }
 };

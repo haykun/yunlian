@@ -47,7 +47,7 @@
             <div><span><img src="../../assets/img/icn_phone2.png" alt=""></span><span>李小姐</span></div>
         </div>
         <div class="opertain">
-          <router-link to="/lssue">签发</router-link>
+          <router-link to="/sign">签发</router-link>
           <router-link to="/">起运</router-link>
         </div>
     </div>

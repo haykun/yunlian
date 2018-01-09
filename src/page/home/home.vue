@@ -12,19 +12,19 @@
 			<!-- tab栏切换 -->
             <div class="tap">
 
-					<router-link to="/task" @click.native="clk1(0)">
+					<router-link to="/task">
                
 						新任务
 						<span></span>
 				
 					</router-link>
-					<router-link to="/estate" @click.native="clk1(1)">
+					<router-link to="/estate">
 
 						配送中
 						<span></span>
 
 					</router-link>
-					<router-link to="/usual" @click.native="clk1(2)">
+					<router-link to="/usual">
 						异常单
 						<span></span>
 					</router-link>
@@ -48,14 +48,34 @@ export default {
     return {};
   },
   methods: {
-	//   切换导航栏
+    //   切换导航栏
     clk1(index) {
       let arr = document.querySelectorAll(".tap span");
+      let arr1 = document.querySelectorAll(".tap a");
       for (var i = 0; i < arr.length; i++) {
         arr[i].style.display = "none";
+        arr1[i].style.fontWeight = "normal";
       }
       arr[index].style.display = "block";
+      arr1[index].style.fontWeight = "bold";
+    },
+    navToggle() {
+      if (this.$route.name == "task") {
+        this.clk1(0);
+      } else if (this.$route.name == "esate") {
+        this.clk1(1);
+      } else {
+        this.clk1(2);
+      }
     }
+  },
+  watch: {
+    $route() {
+			this.navToggle();
+    }
+  },
+  mounted() {
+    this.navToggle();
   }
 };
 </script>
@@ -83,7 +103,8 @@ bg-col = #101a30;
 		line-height: px2rem(80px);
 		text-align: center;
 		padding: 0 px2rem(60px);
-		overflow hidden
+		overflow: hidden;
+
 		a {
 			position: relative;
 			top: 0;
