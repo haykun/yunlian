@@ -26,7 +26,7 @@
                     
                 </li>
                 <li>
-                    <router-link to="/">
+                    <router-link to="/wayall">
                         <img src="../../assets/img/侧边栏-我的/icn_order.png" alt=""><span>运单管理</span>
                     </router-link>
                 </li>

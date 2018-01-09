@@ -1,27 +1,18 @@
 <template>
   <div class="waybill">
-      <app-header></app-header>
+      <app-comhed :name="headerName" :operation = "operation" :flag = "false"></app-comhed>
       <div class="header">
-          			<!-- tab栏切换 -->
+          	<!-- tab栏切换 -->
             <div class="tap">
-
-					<router-link to="/task" @click.native="clk1(0)">
-               
-						全部
-						<span></span>
-				
-					</router-link>
-					<router-link to="/estate" @click.native="clk1(1)">
-
-						未签收
-						<span></span>
-
-					</router-link>
-					<router-link to="/usual" @click.native="clk1(2)">
-						已签收
-						<span></span>
-					</router-link>
-
+                <router-link to="/wayall" @click.native="clk1(0)">
+                    全部<span></span>
+                </router-link>
+                <router-link to="/waynot" @click.native="clk1(1)">
+                    未签收<span></span>
+                </router-link>
+                <router-link to="/wayyes" @click.native="clk1(2)">
+                    已签收<span></span>
+                </router-link>
             </div>
       </div>
     <keep-alive>
@@ -33,16 +24,25 @@
 <script>
 import CardCompontent from "../../components/waybill/card.vue";
 export default {
+    data () {
+        return {
+            headerName:'运单管理',
+            operation:''
+        }
+    },
   components: {
     "way-card": CardCompontent
   },
   methods: {
     clk1(index) {
       let arr = document.querySelectorAll(".tap span");
+      let arr1 = document.querySelectorAll(".tap a")
       for (var i = 0; i < arr.length; i++) {
         arr[i].style.display = "none";
+        arr1[i].style.fontWeight = 'normal';
       }
       arr[index].style.display = "block";
+      arr1[index].style.fontWeight = 'bold';
     }
   }
 };
@@ -50,7 +50,8 @@ export default {
 
 <style lang="stylus" scoped>
 @import '../../components/stylus/mixins.styl';
-
+// 头部tab栏
+bg-col = #101a30;
 // tab栏切换
 .tap {
     position: fixed;
