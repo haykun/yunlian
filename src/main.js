@@ -14,6 +14,7 @@ import './js/flexible'
 import "./components/stylus/mixins.styl";
 //引用字体图标文件
 import './css/icon/iconfont.css'
+import './css/icon1/iconfont.css'
 //手写签名插件
 import vueSignature from "vue-signature"
 

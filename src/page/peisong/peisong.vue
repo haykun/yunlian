@@ -2,7 +2,7 @@
   <div class="peisong" >
 
     <!-- 卡片视图 -->
-    <div class="card" v-for="(item,index) in arr" :key="index">
+    <div class="card">
         <!-- 数字视图 -->
         <div class="number">
             <!-- 提货数字栏 -->
@@ -47,20 +47,37 @@
             <div><span><img src="../../assets/img/icn_phone2.png" alt=""></span><span>李小姐</span></div>
         </div>
         <div class="opertain">
-          <router-link to="/sign">签发</router-link>
-          <router-link to="/">起运</router-link>
+          <button @click="qianfa">签发</button>
+          <button>起运</button>
         </div>
     </div>
+
+    <!-- 二维码弹框 -->
+    <transition name="opec">
+      <app-code v-show="$store.state.codeShow"></app-code>
+    </transition>
+    
 
   </div>
 </template>
 
 <script>
+import Code from "../../components/peisong/QRcode.vue";
 export default {
   data() {
     return {
-      arr: [1, 2, 3, 4]
+      arr: [1, 2, 3, 4],
     };
+  },
+  methods: {
+    qianfa() {
+      //路由跳转到签发详情页面
+      // this.$router.push("/lssue");
+      this.$store.state.codeShow = true;
+    }
+  },
+  components: {
+    "app-code": Code
   }
 };
 </script>
@@ -283,8 +300,7 @@ col = #383838;
       overflow: hidden;
       border-bottom-left-radius: px2rem(20px);
 
-      a {
-        display: inline-block;
+      button {
         width: px2rem(300px);
         height: px2rem(80px);
         line-height: px2rem(80px);
@@ -296,15 +312,30 @@ col = #383838;
         color: #ffffff;
       }
 
-      a:first-child {
+      button:first-child {
         float: left;
       }
 
-      a:last-child {
+      button:last-child {
         float: right;
       }
     }
   }
+}
+
+/* 可以设置不同的进入和离开动画 */
+/* 设置持续时间和动画函数 */
+.opec-enter-active {
+  transition: all 0.3s ease;
+}
+
+.opec-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.opec-enter, .opec-leave-to, {
+  transform: translateX(10px);
+  opacity: 0;
 }
 </style>
 
