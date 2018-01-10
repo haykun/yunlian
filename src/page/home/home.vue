@@ -1,6 +1,8 @@
 <template>
 
     <main>
+
+			<scroller :on-refresh="refresh" :on-infinite="infinite" :loadingLayerColor="bgCol"></scroller>
 		<!-- 头部 -->
         <app-header></app-header> 
 		<transition name="move">
@@ -45,7 +47,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+			bgCol:'#383838'
+		};
   },
   methods: {
     //   切换导航栏
@@ -67,7 +71,13 @@ export default {
       } else {
         this.clk1(2);
       }
-    }
+		},
+		refresh(){
+			console.log(1)
+		},
+		infinite(){
+			console.log(2)
+		}
   },
   watch: {
     $route() {

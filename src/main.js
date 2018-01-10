@@ -24,11 +24,16 @@ import VueQArt from 'vue-qart'
 import common from './components/common/common.js'
 import store from './vuex/store.js'
 
+//下拉刷新上拉加载
+import VueScroller from 'vue-scroller'
+
+
 //手动启用插件
 Vue.use(Mint);
 Vue.use(common);
 Vue.use(DrawerLayout);
 Vue.use(vueSignature);
+Vue.use(VueScroller);
 
 
 //解决移动端点击300ms延迟
@@ -51,6 +56,7 @@ new Vue({
   store,
   template: '<App/>',
   components: {
-    App,VueQArt
+    App,
+    VueQArt
   }
 })
