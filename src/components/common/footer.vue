@@ -2,19 +2,19 @@
   <div class="foot">
       <ul>
           <li>
-              <router-link to="/task" @click.native="clk(0)">
+              <router-link to="/task">
                   <img :src="$store.state.home" alt="">
                   <p>首页</p>
               </router-link>
           </li>
           <li>
-              <router-link to="/check" @click.native="clk(1)">
+              <router-link to="/check">
                   <img :src="$store.state.query" alt="">
                   <p>查单</p>
               </router-link>
           </li>
           <li>
-              <router-link to="/me" @click.native="clk(2)">
+              <router-link to="/me">
                   <img :src="$store.state.my" alt="">
                   <p>我的</p>
               </router-link>
@@ -30,21 +30,21 @@ export default {
   },
   methods: {
     // 点击切换底部图标
-    clk(id) {
-      if (id == 0) {
-        this.$store.state.home = require("../../assets/img/footer/foot_home_s.png");
-        this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
-        this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
-      } else if (id == 1) {
-        this.$store.state.query = require("../../assets/img/footer/foot_query_s.png");
-        this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
-        this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
-      } else {
-        this.$store.state.my = require("../../assets/img/footer/foot_mv_s.png");
-        this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
-        this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
-      }
-    }
+    // clk(id) {
+    //   if (id == 0) {
+    //     this.$store.state.home = require("../../assets/img/footer/foot_home_s.png");
+    //     this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
+    //     this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
+    //   } else if (id == 1) {
+    //     this.$store.state.query = require("../../assets/img/footer/foot_query_s.png");
+    //     this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
+    //     this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
+    //   } else {
+    //     this.$store.state.my = require("../../assets/img/footer/foot_mv_s.png");
+    //     this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
+    //     this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
+    //   }
+    // }
   }
 };
 </script>

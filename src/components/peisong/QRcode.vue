@@ -3,14 +3,25 @@
       <div class="box">
           <div class="title"><h4>扫码签发</h4><i class="iconfont icon-close" @click="codeShow"></i></div>
           <div class="main">
-              <img src="">
+              <vue-q-art :config="config"></vue-q-art>
           </div>
       </div>
   </div>
 </template>
 
 <script>
+
 export default {
+  data() {
+    return {
+      config: {
+        value: "https://www.tengxun.com",
+        imagePath: require("../../assets/img/code.jpg"),
+        filter: 'skyblue',
+        size:100
+      }
+    };
+  },
   methods: {
     codeShow() {
       this.$store.state.codeShow = false;
@@ -37,7 +48,7 @@ export default {
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
         width: px2rem(440px);
-        height: px2rem(440px);
+        height: px2rem(500px);
         border-radius: px2rem(30px);
         overflow: hidden;
 
@@ -65,15 +76,11 @@ export default {
 
         .main {
             width: 100%;
-            height: px2rem(370px);
-            padding: px2rem(40px) px2rem(74px);
+            height: px2rem(430px);
+            padding 0 px2rem(10px)
+            padding-left px2rem(14px)
             box-sizing: border-box;
             background-color: #ffffff;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
         }
     }
 }

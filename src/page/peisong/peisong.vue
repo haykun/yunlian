@@ -63,10 +63,11 @@
 
 <script>
 import Code from "../../components/peisong/QRcode.vue";
+
 export default {
   data() {
     return {
-      arr: [1, 2, 3, 4],
+      arr: [1, 2, 3, 4]
     };
   },
   methods: {
@@ -74,6 +75,7 @@ export default {
       //路由跳转到签发详情页面
       // this.$router.push("/lssue");
       this.$store.state.codeShow = true;
+
     }
   },
   components: {
@@ -333,7 +335,7 @@ col = #383838;
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
-.opec-enter, .opec-leave-to, {
+.opec-enter, .opec-leave-to {
   transform: translateX(10px);
   opacity: 0;
 }

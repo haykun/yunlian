@@ -13,6 +13,7 @@ import MeCompontent from '../page/me/me.vue' //我的
 
 import LssueCompontent from '../page/peisong/lssue.vue' //签发页面
 import SignCompontent from '../page/peisong/sign.vue' //签收页面
+import UadeCompontent from '../page/peisong/uate.vue' //评价页面
 // 侧边栏
 import SetUpCompontent from '../page/setUp/set.vue' //设置页面
 import HelpCompontent from '../page/help/help.vue' //帮助中心
@@ -107,7 +108,12 @@ export default new Router({
     {
       path: '/watch',
       name: 'watchDetail',
-      component: WatchCompontent
+      component: WatchCompontent //查看详情
+    },
+    {
+      path: '/uate',
+      name: 'uate',
+      component: UadeCompontent //评价页面
     }
   ]
 })

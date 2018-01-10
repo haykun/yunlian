@@ -17,7 +17,8 @@ import './css/icon/iconfont.css'
 import './css/icon1/iconfont.css'
 //手写签名插件
 import vueSignature from "vue-signature"
-
+//动态生成二维码控件
+import VueQArt from 'vue-qart'
 
 //引入自己封装的组件,或第三方插件
 import common from './components/common/common.js'
@@ -28,6 +29,7 @@ Vue.use(Mint);
 Vue.use(common);
 Vue.use(DrawerLayout);
 Vue.use(vueSignature);
+
 
 //解决移动端点击300ms延迟
 import FastClick from 'fastclick';
@@ -49,6 +51,6 @@ new Vue({
   store,
   template: '<App/>',
   components: {
-    App
+    App,VueQArt
   }
 })
