@@ -1,11 +1,11 @@
 <template>
 <div class="evaStar">
     <ul class="star">
-        <li v-for="(itemClass,index) in itemClasses" :class="itemClass" class="star-item" @click="stars(index)" track-by="index"></li><!--性能优化 track-by 数据不改变时不会重新渲染-->
+        <li v-for="(itemClass,index) in itemClasses" :key="index" :class="itemClass" class="star-item" @click="stars(index)" track-by="index"></li><!--性能优化 track-by 数据不改变时不会重新渲染-->
     </ul>
 </div>
 </template>
-
+ 
 
 <script type="text/ecmascript-6">
 const LENGTH = 5;
@@ -16,7 +16,7 @@ const CLS_OFF = "off";
 export default {
   data() {
     return {
-      score: 4
+      score: 0
     };
   },
   computed: {
@@ -51,33 +51,32 @@ export default {
 <style lang="stylus" scoped>
 @import '../stylus/mixins.styl';
 
-.evaStar {
-    float: right;
-    padding-top: 0.34rem;
-}
+// .evaStar {
+//   // height: px2rem(160px);
+// }
 
 .star {
-    font-size: 0;
+  font-size: 0;
 }
 
 .star-item {
-    display: inline-block;
-    background-repeat: no-repeat;
-    width: 0.6rem;
-    height: 0.6rem;
-    margin-left: 0.27rem;
-    background-size: 100%;
+  display: inline-block;
+  background-repeat: no-repeat;
+  width: px2rem(50px);
+  height: px2rem(50px);
+  margin-right: px2rem(20px);
+  background-size: 100%;
 }
 
 .star-item.on {
-    background-image: url('../../assets/img/inc_r.png');
+  background-image: url('../../assets/img/icn_star_s.png');
 }
 
 .star-item.half {
-    background-image: url('../../assets/img/icn_site.png');
+  background-image: url('../../assets/img/icn_star_s.png');
 }
 
 .star-item.off {
-    background-image: url('../../assets/img/pic_wifi.png');
+  background-image: url('../../assets/img/icn_star_d.png');
 }
 </style>

@@ -8,7 +8,7 @@
               </router-link>
           </li>
           <li>
-              <router-link to="/check">
+              <router-link to="/uate">
                   <img :src="$store.state.query" alt="">
                   <p>查单</p>
               </router-link>
@@ -27,24 +27,6 @@
 export default {
   data() {
     return {};
-  },
-  methods: {
-    // 点击切换底部图标
-    // clk(id) {
-    //   if (id == 0) {
-    //     this.$store.state.home = require("../../assets/img/footer/foot_home_s.png");
-    //     this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
-    //     this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
-    //   } else if (id == 1) {
-    //     this.$store.state.query = require("../../assets/img/footer/foot_query_s.png");
-    //     this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
-    //     this.$store.state.my = require("../../assets/img/footer/foot_my_d.png");
-    //   } else {
-    //     this.$store.state.my = require("../../assets/img/footer/foot_mv_s.png");
-    //     this.$store.state.query = require("../../assets/img/footer/foot_query_d.png");
-    //     this.$store.state.home = require("../../assets/img/footer/foot_home_d.png");
-    //   }
-    // }
   }
 };
 </script>

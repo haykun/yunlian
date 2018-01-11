@@ -73,7 +73,7 @@ export default {
   methods: {
     qianfa() {
       //路由跳转到签发详情页面
-      // this.$router.push("/lssue");
+      this.$router.push("/lssue");
       this.$store.state.codeShow = true;
 
     }
